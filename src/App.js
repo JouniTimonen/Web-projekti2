@@ -31,7 +31,7 @@ function App() {
 
 
   const addRecipe = () => {
-    Axios.post("http://localhost:3001/create", {
+    Axios.post("https://web-projekti2.herokuapp.com/create", {
       name: name, 
       ingredients: ingredients,
       instructions: instructions
@@ -41,7 +41,7 @@ function App() {
   };
 
   const getRecipes = () => {
-    Axios.get("http://localhost:3001/recipes").then((response) => {
+    Axios.get("https://web-projekti2.herokuapp.com/recipes").then((response) => {
       setRecipes(response.data);
     });
   }
